@@ -1,0 +1,16 @@
+
+
+<div class="container">
+
+  <nav>
+    <div class="menu">
+      <a id="a1"  [ngClass]="{'selected': !current}" routerLink="/about" (click)="updateSelection('a1')">Sobre Mí</a>
+      <a id="a2" [ngClass]="{'selected': current}" routerLink="/projects" (click)="updateSelection('a2')">Proyectos</a>
+    </div>
+    <div>
+      <app-devicon-container class="float-right" [Icons]="[{name: 'GitHub', linkTo: 'https://github.com/JorgeRodriguez9'},{name: 'LinkedIn', linkTo: 'https://www.linkedin.com/in/jorge-andr%C3%A9s-rodr%C3%ADguez-casta%C3%B1o-97a74865/'}]" IconSize="small"></app-devicon-container>
+    </div>
+  </nav>
+
+  <router-outlet></router-outlet>
+</div>
